@@ -1,6 +1,7 @@
 /* Flow ABM — landing styles. Hand-written, system fonts, no external requests. */
 
 :root {
+  color-scheme: light;
   --accent: #5b3df5;        /* strong accent for CTAs */
   --accent-strong: #4a2fd6; /* darker accent for hover + inline text (AA on white) */
   --accent-wash: #efecff;   /* light accent tint for surfaces */
@@ -68,14 +69,32 @@ a { color: var(--accent-strong); }
   border-top: 1px solid var(--line);
   margin-top: 8px;
 }
-.header-inner { display: flex; align-items: center; min-height: 68px; }
+.header-inner,
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  min-height: 68px;
+}
 
 .brand {
   font-weight: 800;
   font-size: 1.2rem;
   letter-spacing: -0.01em;
 }
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+}
 .site-footer .wrap { padding-top: 28px; padding-bottom: 28px; }
+.footer-link {
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 0;
+}
+.footer-link:hover { text-decoration: underline; }
 
 /* Hero */
 .hero { padding: 88px 0 72px; }
@@ -85,17 +104,42 @@ a { color: var(--accent-strong); }
   letter-spacing: -0.02em;
   font-weight: 800;
   margin: 0 0 20px;
-  max-width: 16ch;
+  max-width: 14em;
 }
 .hero-sub {
   font-size: clamp(1.1rem, 2.4vw, 1.4rem);
   color: var(--ink-soft);
-  max-width: 54ch;
-  margin: 0 0 36px;
+  max-width: 42ch;
+  margin: 0 0 12px;
+}
+.audience {
+  margin: 0 0 32px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 /* Buttons */
-.cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+.cta-row.center { justify-content: center; }
+.cta-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+.demo-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  max-width: 18ch;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -127,6 +171,23 @@ a { color: var(--accent-strong); }
   max-width: 26ch;
   line-height: 1.15;
 }
+
+.cta-band {
+  padding: 56px 0;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.cta-band-line {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 28px;
+}
+.cta-band .cta-row,
+.closing .cta-row { justify-content: center; }
+.cta-band .cta-secondary,
+.closing .cta-secondary { justify-content: center; }
 
 /* Steps strip */
 .steps {
@@ -206,11 +267,11 @@ a { color: var(--accent-strong); }
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   letter-spacing: -0.02em;
   margin: 0 0 32px;
-  max-width: 22ch;
+  max-width: 18ch;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.15;
 }
-.closing .cta-row { justify-content: center; }
 
 /* 404 */
 .notfound { text-align: center; padding: 120px 0; }
@@ -226,12 +287,26 @@ a { color: var(--accent-strong); }
 @media (max-width: 560px) {
   .hero { padding: 56px 0 48px; }
   .section { padding: 52px 0; }
+  .cta-band { padding: 44px 0; }
   .cards { grid-template-columns: 1fr; }
+  .cta-row,
+  .cta-secondary { flex-direction: column; align-items: stretch; }
+  .cta-band .cta-secondary,
+  .closing .cta-secondary { align-items: center; }
   .btn { width: 100%; }
+  .demo-note { max-width: none; text-align: left; }
+  .cta-band .demo-note,
+  .closing .demo-note { text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
   .card:hover { transform: none; }
+}
+
+@media (forced-colors: active) {
+  .btn-primary,
+  .btn-ghost,
+  .step-num { border: 2px solid ButtonText; }
 }

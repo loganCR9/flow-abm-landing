@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flow ABM | Turn target accounts into sales conversations</title>
-  <meta name="description" content="Nurture buying groups, explain account readiness with real engagement, and give sales a handoff they can accept or recycle." />
+  <title>Flow ABM | More sales conversations with the accounts you target</title>
+  <meta name="description" content="Know which accounts to call first and why. Every opt-out is respected automatically. For B2B sales and marketing teams." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'none'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self' https://calendly.com https://flow-abm-demo.pages.dev" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Flow ABM | Turn target accounts into sales conversations" />
-  <meta property="og:description" content="Nurture buying groups, explain account readiness with real engagement, and give sales a handoff they can accept or recycle." />
+  <meta property="og:title" content="Flow ABM | More sales conversations with the accounts you target" />
+  <meta property="og:description" content="Know which accounts to call first and why. Every opt-out is respected automatically. For B2B sales and marketing teams." />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Flow ABM | Turn target accounts into sales conversations" />
-  <meta name="twitter:description" content="Nurture buying groups, explain account readiness with real engagement, and give sales a handoff they can accept or recycle." />
+  <meta name="twitter:title" content="Flow ABM | More sales conversations with the accounts you target" />
+  <meta name="twitter:description" content="Know which accounts to call first and why. Every opt-out is respected automatically. For B2B sales and marketing teams." />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -27,13 +29,17 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
-        <h1 class="hero-title">Turn target accounts into <span class="accent">sales conversations</span></h1>
-        <p class="hero-sub">Flow ABM nurtures buying groups and gives sales the evidence to start the right conversation.</p>
+        <h1 id="hero-title" class="hero-title">More <span class="accent">sales conversations</span> with the accounts you target</h1>
+        <p class="hero-sub">Know which accounts to call first and why. Every opt-out is respected automatically.</p>
+        <p class="audience">For B2B sales and marketing teams.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://flow-abm-demo.pages.dev/demo">See it in action</a>
-          <a class="btn btn-ghost" href="#how-it-works">How it works</a>
+          <a class="btn btn-primary" href="https://calendly.com/logan-capturerevenue/flow-abm-demo">Book a demo</a>
+          <div class="cta-secondary">
+            <a class="btn btn-ghost" href="https://flow-abm-demo.pages.dev/demo" aria-describedby="demo-note-hero">See it in action</a>
+            <p class="demo-note" id="demo-note-hero">Interactive demo with sample data.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -44,26 +50,39 @@
         <ol class="steps">
           <li class="step">
             <span class="step-num" aria-hidden="true">1</span>
-            <h3 class="step-title">Approve the account play</h3>
-            <p>Turn your brief into a plan and content, then approve the content and target list.</p>
+            <h3 class="step-title">Approve the plan</h3>
+            <p>Write the plan and the messages. Approve them and the account list before anything is sent.</p>
           </li>
           <li class="step">
             <span class="step-num" aria-hidden="true">2</span>
-            <h3 class="step-title">Nurture the buying group</h3>
-            <p>Launch coordinated touches that speak to each stakeholder&rsquo;s role.</p>
+            <h3 class="step-title">Reach the right people</h3>
+            <p>Each person at the account gets a message that fits their role.</p>
           </li>
           <li class="step">
             <span class="step-num" aria-hidden="true">3</span>
-            <h3 class="step-title">Give sales the evidence</h3>
-            <p>Review account readiness and approve the handoff for sales to accept or recycle.</p>
+            <h3 class="step-title">Show sales who to call</h3>
+            <p>See which accounts to call first and why. Your team approves them. Sales starts the conversation, or sends the account back for more work and says why.</p>
           </li>
         </ol>
       </div>
     </section>
 
+    <section class="section cta-band" aria-label="Book a demo">
+      <div class="wrap">
+        <p class="cta-band-line">See which accounts to call first.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://calendly.com/logan-capturerevenue/flow-abm-demo">Book a demo</a>
+          <div class="cta-secondary">
+            <a class="btn btn-ghost" href="https://flow-abm-demo.pages.dev/demo" aria-describedby="demo-note-mid">See it in action</a>
+            <p class="demo-note" id="demo-note-mid">Interactive demo with sample data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" aria-labelledby="features-title">
       <div class="wrap">
-        <h2 id="features-title" class="section-title">Know when sales should act</h2>
+        <h2 id="features-title" class="section-title">Before the call</h2>
         <div class="cards">
           <article class="card">
             <span class="card-icon" aria-hidden="true">
@@ -73,7 +92,7 @@
               </svg>
             </span>
             <h3 class="card-title">Plans you approve</h3>
-            <p>Turn approved briefs into plans and content your team reviews before launch.</p>
+            <p>Your team reviews the plan and the messages before they are sent.</p>
           </article>
 
           <article class="card">
@@ -83,8 +102,8 @@
                 <path d="M2.5 20a5.5 5.5 0 0 1 11 0" /><path d="M15 20a4.5 4.5 0 0 1 6.5-4" />
               </svg>
             </span>
-            <h3 class="card-title">Reach each buying role</h3>
-            <p>Keep stakeholders engaged with role-specific nurture and frequency caps.</p>
+            <h3 class="card-title">Messages that fit the role</h3>
+            <p>Each person gets messages that fit their role, on a pace you set.</p>
           </article>
 
           <article class="card">
@@ -94,8 +113,8 @@
                 <circle cx="12" cy="12" r="3" />
               </svg>
             </span>
-            <h3 class="card-title">Explain every handoff</h3>
-            <p>See who engaged, what happened, and why the account is ready.</p>
+            <h3 class="card-title">A reason for the call</h3>
+            <p>See who responded, what they did, and why this account comes first.</p>
           </article>
 
           <article class="card">
@@ -105,8 +124,8 @@
                 <path d="M20 8l-4 5-6-6-5 5" />
               </svg>
             </span>
-            <h3 class="card-title">Count real engagement</h3>
-            <p>Readiness ignores email opens and bot clicks, including security scanners.</p>
+            <h3 class="card-title">Real interest only</h3>
+            <p>Email opens and clicks from security tools do not count.</p>
           </article>
 
           <article class="card">
@@ -116,8 +135,8 @@
                 <path d="M8.5 12l2.3 2.3L15.5 9.5" />
               </svg>
             </span>
-            <h3 class="card-title">Keep humans in control</h3>
-            <p>People approve each handoff; sales accepts or recycles it with a reason.</p>
+            <h3 class="card-title">Your team decides</h3>
+            <p>Your team approves each account before a call. Sales starts the conversation, or sends it back for more work and says why.</p>
           </article>
 
           <article class="card">
@@ -126,26 +145,31 @@
                 <circle cx="12" cy="12" r="9" /><path d="M5.6 5.6l12.8 12.8" />
               </svg>
             </span>
-            <h3 class="card-title">Respect every opt-out</h3>
-            <p>Built-in suppression and opt-out checks run before every touch.</p>
+            <h3 class="card-title">Every opt-out is respected</h3>
+            <p>Opt-outs are checked automatically before every message is sent.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section closing" aria-label="Get started">
+    <section class="section closing" aria-label="Book a demo">
       <div class="wrap">
-        <p class="closing-line"><strong>Give sales a reason to start the conversation.</strong></p>
+        <p class="closing-line"><strong>Give every sales call a clear reason.</strong></p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://flow-abm-demo.pages.dev/demo">See it in action</a>
+          <a class="btn btn-primary" href="https://calendly.com/logan-capturerevenue/flow-abm-demo">Book a demo</a>
+          <div class="cta-secondary">
+            <a class="btn btn-ghost" href="https://flow-abm-demo.pages.dev/demo" aria-describedby="demo-note-close">See it in action</a>
+            <p class="demo-note" id="demo-note-close">Interactive demo with sample data.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
+    <div class="wrap footer-inner">
       <span class="brand">Flow ABM</span>
+      <a class="footer-link" href="https://calendly.com/logan-capturerevenue/flow-abm-demo">Book a demo</a>
     </div>
   </footer>
 </body>
