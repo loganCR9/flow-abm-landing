@@ -124,7 +124,8 @@ a { color: var(--accent-strong); }
   letter-spacing: -0.02em;
   font-weight: 800;
   margin: 0 0 44px;
-  max-width: 20ch;
+  max-width: 26ch;
+  line-height: 1.15;
 }
 
 /* Steps strip */
